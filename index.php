@@ -1563,7 +1563,7 @@ function getInstance(instanceName = null, color = '#1090fa') {
         console.log('average distance: ' + avgDistance + 'm')
         let routeLength = distanceAll.toFixed(3);
         if (points.length > 0 ) {
-          if (result.type == 'circle_pokemon') {
+          if (result.type == 'circle_pokemon' || result.type == 'circle_smart_pokemon') {
             if (!($('#instanceRadiusCheck').is(":checked"))) {
               radius = 70;
             }
