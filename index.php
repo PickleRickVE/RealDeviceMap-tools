@@ -4099,6 +4099,22 @@ function newMSQuests() {
     selectText: subs.selectInstances
   });
 }
+
+function mapOnlyToggle(e) {
+  if (e.ctrlKey && e.key === "[") {
+    let targets = document.getElementsByClassName("leaflet-top");
+    for (let target of targets) {
+      if (target.style.display === "none") {
+        target.style.display = "block";
+      } else {
+        target.style.display = "none";
+      }
+    }
+  }
+}
+
+document.addEventListener("keyup", mapOnlyToggle, false);
+
 </script>
 
 </head>
